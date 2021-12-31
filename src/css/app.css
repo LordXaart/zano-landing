@@ -76,3 +76,21 @@ a {
 .max-w-80 {
     max-width: 80%;
 }
+
+.pattern-1 {
+    position: absolute;
+    left: 0;
+    top: 34%;
+    transform: translate();
+    width: 23%;
+    z-index: -1;
+}
+
+.pattern-2 {
+    position: absolute;
+    right: 0;
+    top: 52%;
+    transform: translate();
+    width: 23%;
+    z-index: -1;
+}
