@@ -3,3 +3,76 @@
 @tailwind components;
 
 @tailwind utilities;
+
+h1 {
+    @apply text-3xl sm:text-5xl;
+    @apply font-black;
+}
+h2 {
+    @apply text-2xl sm:text-4xl;
+    @apply font-black;
+}
+h3 {
+    @apply text-3xl;
+    @apply font-black;
+}
+h4 {
+    @apply text-2xl font-black;
+}
+a {
+    @apply text-blue-600 underline;
+    text-decoration: none;
+}
+
+.background-zano {
+    background-image: url('../images/zano_pattern.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30%;
+}
+.shadow-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @apply rounded-xl;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+.dashed-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(115%, -10%);
+}
+.btn {
+    color: #fff;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @apply space-x-4;
+    @apply py-3;
+    @apply px-10;
+    @apply font-semibold;
+    @apply text-xl;
+}
+
+.rounded-bg {
+    background-color: #fff;
+    width: 100%;
+    height: 75px;
+    border-radius: 50% 50% 50% 50% / 0% 0% 80% 80%;
+    border-color: #fff;
+    position: relative;
+}
+.text-gradient-sky {
+    background: linear-gradient(267.73deg, #16C6D8 0%, #2364F8 100%), linear-gradient(0deg, #525665, #525665);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.max-w-80 {
+    max-width: 80%;
+}
