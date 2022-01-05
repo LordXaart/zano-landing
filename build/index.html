@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
 </head>
-<body class="font-sans font-normal h-screen">
+<body class="font-sans font-normal">
     <section class="background-zano bg-white z-10">
         <div class="container py-10">
             <div class="mb-10">
@@ -25,13 +25,17 @@
                     from the creator of the original CryptoNote codebase (that’s spawned Monero).
                 </p>
             </div>
-            <div class="text-center mb-6">
+            <div class="text-center mb-6 overflow-hidden">
                 <h3 class="text-heading-black mb-6">
                     Zano is one of the few coins in Roger Ver’s portfolio
                 </h3>
-                <div class="relative max-w-lg w-full mx-auto">
+                <div class="relative max-w-lg w-full mx-auto z-0">
                     <div class="shadow-block bg-blue-100"></div>
-                    <iframe class="max-w-lg w-full aspect-video mx-auto rounded-xl" src="https://www.youtube.com/embed/YCQX-8a3Bcc?t=2074s" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="video-shadow rounded-xl cursor-pointer">
+                        <img class="play-button hidden md:block" src="/images/icons/play.svg" alt="play">
+                        <img class="block md:hidden" src="/images/icons/play_sm.svg" alt="play">
+                    </div>
+                    <iframe class="max-w-lg w-full aspect-video mx-auto rounded-xl overflow-hidden" src="https://www.youtube.com/embed/YCQX-8a3Bcc?t=2074s" title="YouTube video player" allow="autoplay" allowfullscreen=""></iframe>
                     <img class="dashed-arrow invisible xl:visible" src="/images/icons/arrow.svg" alt="arrow">
                 </div>
             </div>
@@ -57,14 +61,14 @@
                     <img src="/images/icons/zano.svg" alt="Zano">
                 </a>
             </div>
-        </div>    
+        </div>
     </section>
     <section class="bg-gradient-blue -z-10 pb-28" style="position: relative; top: -5rem;">
         <div class="rounded-bg h-12"></div>
         <div class="container py-16 text-center">
             <h2 class="mb-4 text-white">Zano meatup in Mexico</h2>
             <p class="text-lg sm:text-2xl text-white">Roger Ver (Bitcoin Cash), Andrey Sabelnikov (Zano founder),<br> Mike ..., Tyler Spalding (Flexa), Pavel Nikienkov (Zano co-founder)</p>
-            <div class="inline-block mx-auto relative my-16">
+            <div class="max-w-full md:max-w-lg mx-auto relative my-16">
                 <div class="shadow-block bg-blue-100 opacity-50"></div>
                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Zano team's recent trip to Mexico was highly productive and a lot of fun. A big thank you to all involved! <a href="https://t.co/uGAVc0lwUM">pic.twitter.com/uGAVc0lwUM</a></p>— Zano (@zano_project) <a href="https://twitter.com/zano_project/status/1400067141123072004?ref_src=twsrc%5Etfw">June 2, 2021</a></blockquote>
                 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -80,7 +84,11 @@
                 <p class="text-lg sm:text-2xl text-gradient-sky">(Zano founder and CryptoNote creator)</p>
                 <div class="relative max-w-lg w-full mx-auto mt-8 mb-4">
                     <div class="shadow-block bg-blue-100"></div>
-                    <iframe class="max-w-lg w-full aspect-video mx-auto rounded-xl" src="https://www.youtube.com/embed/8TdRor-xFp0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="video-shadow rounded-xl cursor-pointer">
+                        <img class="play-button hidden md:block" src="/images/icons/play.svg" alt="play">
+                        <img class="block md:hidden" src="/images/icons/play_sm.svg" alt="play">
+                    </div>
+                    <iframe class="max-w-lg w-full aspect-video mx-auto rounded-xl" src="https://www.youtube.com/embed/8TdRor-xFp0?" title="YouTube video player" allow="autoplay" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -272,5 +280,15 @@
             <p class="text-center text-muted text-sm">Copyright © 2022 ZANO.org</p>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.video-shadow').forEach((element) => {
+            element.addEventListener('click', (event) => {
+                const iframe = element.nextElementSibling;
+                iframe.src += "&autoplay=1";
+                element.remove();
+            })
+        });
+    </script>
 
 </body></html>
