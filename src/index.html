@@ -33,7 +33,7 @@
                 </h3>
                 <div class="relative max-w-lg w-full mx-auto z-0">
                     <div class="shadow-block bg-blue-100"></div>
-                    <div class="video-shadow rounded-xl cursor-pointer">
+                    <div class="video-shadow rounded-xl cursor-pointer bg-preview preview-1">
                         <img class="play-button hidden md:block" src="%PUBLIC_URL%/images/icons/play.svg" alt="play">
                         <img class="block md:hidden" src="%PUBLIC_URL%/images/icons/play_sm.svg" alt="play">
                     </div>
@@ -86,7 +86,7 @@
                 <p class="text-lg sm:text-2xl text-gradient-sky">(Zano founder and CryptoNote creator)</p>
                 <div class="relative max-w-lg w-full mx-auto mt-8 mb-4">
                     <div class="shadow-block bg-blue-100"></div>
-                    <div class="video-shadow rounded-xl cursor-pointer">
+                    <div class="video-shadow rounded-xl cursor-pointer bg-preview preview-2">
                         <img class="play-button hidden md:block" src="%PUBLIC_URL%/images/icons/play.svg" alt="play">
                         <img class="block md:hidden" src="%PUBLIC_URL%/images/icons/play_sm.svg" alt="play">
                     </div>
@@ -288,7 +288,7 @@
             element.addEventListener('click', (event) => {
                 const iframe = element.nextElementSibling;
                 iframe.src += "&autoplay=1";
-                element.remove();
+                setTimeout(() => element.remove(), 500);
             })
         });
     </script>

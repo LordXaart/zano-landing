@@ -108,3 +108,12 @@ a {
 .play-button {
     max-width: 25%;
 }
+.bg-preview {
+    background-size: cover;
+}
+.preview-1 {
+    background-image: url('/images/preview_1.jpg');
+}
+.preview-2 {
+    background-image: url('/images/preview_2.jpg');
+}
